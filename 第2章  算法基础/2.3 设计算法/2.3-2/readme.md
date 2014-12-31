@@ -34,12 +34,13 @@
 	end
 
 ####c 代码：
+	#include<malloc.h>
 	void merge(int *A,int size,int p,int q,int r)
 	{
 		int n1=q-p;
 		int n2=r-q;
-		int *L=new int[n1];
-		int *R=new int[n2];
+		int *L=(int*)malloc(sizeof(int)*n1);
+		int *R=(int*)malloc(sizeof(int)*n2);
 		int i,j,k;
 		for(i=0;i<n1;++i)
 		{
@@ -75,4 +76,6 @@
 			k=k+1;
 			j=j+1;
 		}
+		free(R);
+		free(L);
 	}
