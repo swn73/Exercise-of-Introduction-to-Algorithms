@@ -1,10 +1,10 @@
-##题目描述：
+## 题目描述：
 >重写过程`insertion-sort`,使之按照非升序排序
 
 -------
-##思路：
+## 思路：
 这个比较简单，只要注意一下`key`与已排好序的`A[0,1...j-1]`每个元素比较就行。
-####伪代码：
+#### 伪代码：
 	DESC-insertion-sort(A)
 		for i=1 to A.length-1
 	  		key=A[i]
@@ -16,6 +16,7 @@
 	end
 	
 #### c 代码:
+```c
 	 void DESC_insertion_sort(int* a,int n)
  	{
 		 int i=0;
@@ -31,3 +32,4 @@
 			 a[j+1]=key;
 		 }
 	 }
+```

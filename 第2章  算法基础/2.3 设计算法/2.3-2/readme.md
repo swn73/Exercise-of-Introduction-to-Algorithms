@@ -1,10 +1,10 @@
-##题目描述:
+## 题目描述:
 >重写过程`merge`，使之不用哨兵，
 
 -----
-##思路
+## 思路
 书上的`merge`使用哨兵只是避免多次检查`L`诉诸或者`R`数组是否已复制完。
-####伪代码：
+#### 伪代码：
 	merge(A,p,q,r)
 		n1=q-p
 		n2=r-q
@@ -33,7 +33,8 @@
 			k=k+1
 	end
 
-####c 代码：
+#### c 代码：
+```c
 	#include<malloc.h>
 	void merge(int *A,int size,int p,int q,int r)
 	{
@@ -79,3 +80,4 @@
 		free(R);
 		free(L);
 	}
+```
